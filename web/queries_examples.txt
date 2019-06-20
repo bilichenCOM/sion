@@ -1,0 +1,281 @@
+// ------------Message to channel------------
+
+POST https://slack.com/api/chat.postMessage
+Content-type: application/json
+Authorization: Bearer YOUR_TOKEN_HERE
+{
+  "channel": "YOUR_CHANNEL_ID",
+  "text": "Hello, world"
+}
+
+// -----------Thread creating-------------
+
+POST https://slack.com/api/chat.postMessage
+Content-type: application/json
+Authorization: Bearer YOUR_TOKEN_HERE
+{
+  "channel": "YOUR_CHANNEL_ID",
+  "thread_ts": "PARENT_MESSAGE_TS",
+  "text": "Hello again!"
+}
+
+// -----Request body triggered by app_mention------
+
+{
+    "type": "app_mention",
+    "user": "U061F7AUR",
+    "text": "<@U0LAN0Z89> is it everything a river should be?",
+    "ts": "1515449522.000016",
+    "channel": "C0LAN2Q65",
+    "event_ts": "1515449522000016"
+}
+
+// ------Request body triggered by message.channels-----------
+
+{
+    "token": "one-long-verification-token",
+    "team_id": "T061EG9R6",
+    "api_app_id": "A0PNCHHK2",
+    "event": {
+        "type": "message",
+        "channel": "C024BE91L",
+        "user": "U2147483697",
+        "text": "Live long and prospect.",
+        "ts": "1355517523.000005",
+        "event_ts": "1355517523.000005",
+        "channel_type": "channel"
+    },
+    "type": "event_callback",
+    "authed_teams": [
+        "T061EG9R6"
+    ],
+    "event_id": "Ev0PV52K21",
+    "event_time": 1355517523
+}
+
+// --------Request body triggered by reaction_added----------
+
+{
+    "type": "reaction_added",
+    "user": "U024BE7LH",
+    "reaction": "thumbsup",
+    "item_user": "U0G9QF9C6",
+    "item": {
+        "type": "message",
+        "channel": "C0G9QF9GZ",
+        "ts": "1360782400.498405"
+    },
+    "event_ts": "1360782804.083113"
+}
+
+// ---------Request triggered by member_joined_channel------------
+
+{
+    "type": "member_joined_channel",
+    "user": "W06GH7XHN",
+    "channel": "C0698JE0H",
+    "channel_type": "C",
+    "team": "T024BE7LD",
+    "inviter": "U123456789"
+}
+
+// ------------Request body triggered by method channels.info----------
+
+{
+    "ok": true,
+    "channel": {
+        "id": "C1H9RESGL",
+        "name": "busting",
+        "is_channel": true,
+        "created": 1466025154,
+        "creator": "U0G9QF9C6",
+        "is_archived": false,
+        "is_general": false,
+        "name_normalized": "busting",
+        "is_shared": false,
+        "is_org_shared": false,
+        "is_member": true,
+        "is_private": false,
+        "is_mpim": false,
+        "last_read": "1503435939.000101",
+        "latest": {
+            "text": "Containment unit is 98% full",
+            "username": "ecto1138",
+            "bot_id": "B19LU7CSY",
+            "attachments": [
+                {
+                    "text": "Don't get too attached",
+                    "id": 1,
+                    "fallback": "This is an attachment fallback"
+                }
+            ],
+            "type": "message",
+            "subtype": "bot_message",
+            "ts": "1503435956.000247"
+        },
+        "unread_count": 1,
+        "unread_count_display": 1,
+        "members": [
+            "U0G9QF9C6",
+            "U1QNSQB9U"
+        ],
+        "topic": {
+            "value": "Spiritual containment strategies",
+            "creator": "U0G9QF9C6",
+            "last_set": 1503435128
+        },
+        "purpose": {
+            "value": "Discuss busting ghosts",
+            "creator": "U0G9QF9C6",
+            "last_set": 1503435128
+        },
+        "previous_names": [
+            "dusting"
+        ]
+    }
+}
+
+// ---------------Response on reaction.get -------
+
+{
+    "ok": true,
+    "type": "message",
+    "channel": "GGTDVFQG6",
+    "message": {
+        "client_msg_id": "0bf41ac5-be71-46ff-a3b9-f72a62336c65",
+        "type": "message",
+        "text": "\u0417\u0430\u043d\u044f\u0442\u0438\u0435 14",
+        "user": "UH26KF7BM",
+        "ts": "1556553948.021400",
+        "thread_ts": "1556553948.021400",
+        "reply_count": 17,
+        "reply_users_count": 4,
+        "latest_reply": "1556563778.047000",
+        "reply_users": [
+            "UH26KF7BM",
+            "BHWLVQKRQ",
+            "UE34K2AUW",
+            "UGNUC650D"
+        ],
+        "replies": [
+            {
+                "user": "UH26KF7BM",
+                "ts": "1556554036.023900"
+            },
+            {
+                "user": "UH26KF7BM",
+                "ts": "1556554063.025400"
+            },
+            {
+                "user": "BHWLVQKRQ",
+                "ts": "1556554064.025600"
+            },
+            {
+                "user": "UH26KF7BM",
+                "ts": "1556554095.025900"
+            },
+            {
+                "user": "UH26KF7BM",
+                "ts": "1556554803.029500"
+            },
+            {
+                "user": "UH26KF7BM",
+                "ts": "1556554891.030400"
+            },
+            {
+                "user": "UH26KF7BM",
+                "ts": "1556554939.031500"
+            },
+            {
+                "user": "UH26KF7BM",
+                "ts": "1556555002.033800"
+            },
+            {
+                "user": "UH26KF7BM",
+                "ts": "1556555834.036100"
+            },
+            {
+                "user": "UH26KF7BM",
+                "ts": "1556556251.038100"
+            },
+            {
+                "user": "UE34K2AUW",
+                "ts": "1556556283.039400"
+            },
+            {
+                "user": "UGNUC650D",
+                "ts": "1556556402.039600"
+            },
+            {
+                "user": "UE34K2AUW",
+                "ts": "1556556421.039800"
+            },
+            {
+                "user": "UH26KF7BM",
+                "ts": "1556556630.040000"
+            },
+            {
+                "user": "UH26KF7BM",
+                "ts": "1556557544.042700"
+            },
+            {
+                "user": "UH26KF7BM",
+                "ts": "1556559333.044900"
+            },
+            {
+                "user": "UH26KF7BM",
+                "ts": "1556563778.047000"
+            }
+        ],
+        "subscribed": false,
+        "permalink": "https:\/\/mateacademy.slack.com\/archives\/GGTDVFQG6\/p1556553948021400?thread_ts=1556553948021400",
+        "reactions": [
+            {
+                "name": "heavy_plus_sign",
+                "users": [
+                    "UGNDZ1BHC",
+                    "UGNK39X6G",
+                    "UGE596Y87",
+                    "UGKF3350F",
+                    "UGLJSTTU4",
+                    "UGZ1G223G",
+                    "UGNSM7HAR",
+                    "UGSSVAA56",
+                    "UGHTLTTU0",
+                    "UGNUC650D",
+                    "UD0GAMCM9",
+                    "UFQHVDPHB",
+                    "UGNHE8S8L",
+                    "UE34K2AUW",
+                    "UH2KXF604",
+                    "UGS2DNTR8",
+                    "UGQPS4BAS"
+                ],
+                "count": 17
+            }
+        ]
+    }
+}
+
+// -------response
+
+{
+	"channel":"CJ84589DK",
+	"ok":true,
+	"type":"message",
+	"message":{
+		"client_msg_id":"c8ad8152-c25a-4127-b09c-e1f97b5c210a",
+		"parent_user_id":"UGNHE8S8L",
+		"thread_ts":"1556646962.001500",
+		"reactions":[{
+			"name":"heavy_plus_sign",
+			"count":1,
+			"users":["UGNHE8S8L"]
+		}],
+		"text":"<@UJ9U0CYLX> count",
+		"type":"message",
+		"permalink":"https://mateacademy.slack.com/archives/CJ84589DK/p1556647341004600?thread_ts=1556646962001500",
+		"user":"UGNHE8S8L",
+		"ts":"1556647341.004600"
+	}
+}
